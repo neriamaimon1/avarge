@@ -1,0 +1,29 @@
+
+#grades_exe
+subjects=[]
+grades=[]
+name=input("hey user please enter your name: ")
+log=input("hey "+name+ ", please enter your password: ")
+while log!="Qwerty":
+    log=input("hey "+name+ ", please enter your password: ")
+print("currect password")
+subject=input("hey "+name+", please enter subject: ")
+subjects.insert(len(subjects),subject)
+grade=int(input("ok now enter grades: "))
+grades.insert(len(subjects),grade)
+while True:
+    subject=input("please enter subject: ")
+    if subject == "no more":
+        break
+    subjects.insert(len(subjects),subject)
+    grade=int(input("ok now enter grades: "))
+    grades.insert(len(subjects),grade)
+avg=sum(grades)
+sumavg=avg/len(grades)
+print("your average is: ")
+print(sumavg)
+for i in range(len(grades)):
+               if (grades)[i]>80:
+                   print(subjects[i])
+grades1=str(grades)
+print(grades1[1:-1 ])
